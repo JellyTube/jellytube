@@ -1,0 +1,136 @@
+/* General Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Intro Screen Styles */
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1a1a1a, #333333);
+  color: white;
+  padding: 20px;
+}
+
+#intro h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+#intro p {
+  font-size: 1.6rem;
+}
+
+/* Main Content Styles */
+#main-content {
+  padding: 40px;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 2.8rem;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  border-bottom: 4px solid #bb86fc;
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #bb86fc;
+  border-bottom: 3px solid #bb86fc;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+/* Item Container Styles */
+#showsContainer, #moviesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.item {
+  background: #1f1f1f;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(25% - 30px); /* 4 items per row with padding */
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid #bb86fc;
+}
+
+.item h3 {
+  margin: 15px 10px;
+  font-size: 1.3rem;
+  color: #e0e0e0;
+}
+
+/* Episode Container Styles */
+.episode-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.episode {
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.episode:hover {
+  background: #333333;
+}
+
+.episode a {
+  color: #bb86fc;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.episode a:hover {
+  text-decoration: underline;
+}
+
+/* Video Player Styles */
+video {
+  width: 100%;
+  border-radius: 15px;
+  border: 4px solid #bb86fc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .item {
+    width: calc(50% - 30px); /* 2 items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    width: 100%; /* 1 item per row */
+  }
+}
